@@ -14,7 +14,8 @@ document.addEventListener('keydown', e => {
   const whiteKeyIndex = WHITE_KEYS.indexOf(key)
   const blackKeyIndex = BLACK_KEYS.indexOf(key)
 
-  if (whiteKeyIndex > -1 /*-1 is returned when nothing can be found*/) playNote()
+  if (whiteKeyIndex > -1 /*-1 is returned when nothing can be found*/) playNote(whiteKeys[whiteKeyIndex])
+  if (blackKeyIndex > -1 ) playNote(blackKeys[blackKeyIndex])
 })
 
 function playNote(key) {
